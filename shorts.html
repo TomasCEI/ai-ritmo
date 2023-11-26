@@ -1,199 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-   
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .shorts-screen-container {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 60px;
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+        }
+
+        .video-iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .feed-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feed-icons i {
+            font-size: 1.5em;
+            color: #ebebeb;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .video-controls-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .video-info {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .video-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .video-artist {
+            color: #B3B3B3;
+            font-size: 0.9em;
+        }
+
+        .video-progress-bar {
+            flex: 1;
+            height: 5px;
+            background: #333333;
+            border-radius: 5px;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .video-progress-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            background: #b18cfe;
+            border-radius: 5px;
+        }
+
+        .video-control-icon {
+            font-size: 1.5em;
+            color: #ebebeb;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Main Container (The Player and Nav Bar) */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 0;
+            background: #121212;
+            padding: 10px;
+            z-index: 1;
+            width: 100%;
+            margin-top: auto;
+            margin: 0 auto;
+            padding-top: 126px;
+        }
 
 
-    .shorts-screen-container {
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-      padding-top: 60px;
-      position: relative;
-    }
+        /* Nav Bar Container */
+        .nav-container {
+            width: 100%;
+            height: 70px;
+            background: #1E2128FF;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            margin-top: 0px;
+            position: fixed;
+            bottom: 0px;
+            z-index: 100;
+            margin: 5px;
+        }
 
-  
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 20px;
-      padding-bottom: 56.25%; 
-      overflow: hidden;
-    }
+        /* Nav Bar Item */
+        .nav-item {
+            padding: 10px 19.5px;
+            display: flex;
+            flex: 1 1 0px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background: #000000FF;
+            border-radius: 0px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            height: 70px;
+        }
 
+        /* Nav Bar Hover Effect */
+        .nav-item:hover {
+            color: #b18cfe;
+            background: #00000080;
+        }
 
-    .video-iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
+        /* Nav Bar Selected Item */
+        .nav-item.selected {
+            position: relative;
+            font-weight: 700;
+            color: #b18cfe;
+            background: #000000FF;
+        }
 
-   
-    .video-controls-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
+        /* Icon styles */
+        .nav-item i {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
 
-    
-    .video-info {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-    }
-
-   
-    .video-title {
-      font-size: 1.2em;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-
-    
-    .video-artist {
-      color: #B3B3B3;
-      font-size: 0.9em;
-    }
-
-    
-    .video-progress-bar {
-      flex: 1;
-      height: 5px;
-      background: #333333;
-      border-radius: 5px;
-      margin: 0 10px;
-      position: relative;
-    }
-
-   
-    .video-progress-indicator {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 50%; 
-      background: #b18cfe;
-      border-radius: 5px;
-    }
-
-    
-    .video-control-icon {
-      font-size: 1.5em;
-      color: #ebebeb;
-      cursor: pointer;
-      margin-left: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
+        video#bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(vid.jpg) no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
+
 <body>
 
+    <div class="shorts-screen-container">
 
-<div class="shorts-screen-container">
-
-  
-  <div class="video-container">
-
-    <iframe class="video-iframe" src="https://player.vimeo.com/video/470603712" title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<div class="feed-icons">
-  <i class="far fa-heart video-control-icon"></i>
-    <i class="far fa-comment video-control-icon"></i>
-    <i class="far fa-save video-control-icon"></i>
-    <i class="fas fa-share-alt video-control-icon"></i>
-</div>
-  </div>
-
- 
-  <div class="video-controls-container">
- 
-    <div class="video-info">
-
-      <div class="video-title">So Free</div>
-    
-      <div class="video-artist">Alex Serra</div>
+        <div class="video-container">
+            <iframe class="video-iframe" src="https://player.vimeo.com/video/470603712?autoplay=1"
+                title="Vimeo video player" frameborder="0" allow="fullscreen"></iframe>
+            <div class="feed-icons">
+                <i class="fa fa-heart video-control-icon"></i>
+                <i class="fa fa-comment video-control-icon"></i>
+                <i class="fa fa-save video-control-icon"></i>
+                <i class="fas fa-share-alt video-control-icon"></i>
+            </div>
+        </div>
+        <div class="video-controls-container">
+            <div class="video-info">
+                <div class="video-title">So Free</div>
+                <div class="video-artist">Alex Serra</div>
+            </div>
+            <div class="video-progress-bar">
+                <div class="video-progress-indicator"></div>
+            </div>
+        </div>
     </div>
 
-  
-    <div class="video-progress-bar">
-     
-      <div class="video-progress-indicator"></div>
+    <div class="video-container">
+        <iframe width="560" height="315"
+            src="https://youtu.be/S52_XxBwbJg?t=476"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="video-controls-container">
+            <div class="video-info">
+                <div class="video-title">Te Guardo</div>
+                <div class="video-artist">Silvana Estrada</div>
+            </div>
+            <div class="video-progress-bar">
+                <div class="video-progress-indicator"></div>
+            </div>
+        </div>
     </div>
 
-   
-    <i class="far fa-heart video-control-icon"></i>
-    <i class="far fa-comment video-control-icon"></i>
-    <i class="far fa-save video-control-icon"></i>
-    <i class="fas fa-share-alt video-control-icon"></i>
-  </div>
-
-  <div class="video-container">
-    <iframe class="video-iframe" src="https://player.vimeo.com/video/554291898" title="Vimeo video player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-
-  <div class="video-controls-container">
- 
-    <div class="video-info">
-
-      <div class="video-title">So Free</div>
-    
-      <div class="video-artist">Alex Serra</div>
+    <div class="video-container">
+        <iframe width="560" height="615"
+            src="https://youtu.be/C8wpfQ5pdfo?t=46"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="video-controls-container">
+            <div class="video-info">
+                <div class="video-title">Alfonsina y El Mar</div>
+                <div class="video-artist">Rita Paez</div>
+            </div>
+            <div class="video-progress-bar">
+                <div class="video-progress-indicator"></div>
+            </div>
+        </div>
     </div>
 
-  
-    <div class="video-progress-bar">
-     
-      <div class="video-progress-indicator"></div>
+    <div class="video-container">
+        <video id="bgvid" autoplay loop poster="vid.jpg">
+            <source src="snow.mp4" type="video/webm">
+        </video>
+        <div class="video-controls-container">
+            <div class="video-info">
+                <div class="video-title">Ocean</div>
+                <div class="video-artist">El Mar</div>
+            </div>
+            <div class="video-progress-bar">
+                <div class="video-progress-indicator"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Container (The Player and Nav Bar) -->
+    <div class="main-container">
+
+        <div class="nav-container">
+
+          <a href="index.html"><div class="nav-item selected" onclick="selectNav('home')">
+            <i class="fa fa-house"></i>
+            Home
+          </div></a>
+      
+          <!-- Playlists -->
+          <a href="playlist.html"></a><div class="nav-item" onclick="selectNav('playlists')">
+            <i class="fa fa-music"></i>
+            Playlists
+          </div></a>
+      
+          <!-- Artist -->
+          <a href="artist.html"></a><div class="nav-item" onclick="selectNav('artist')">
+            <i class="fa-solid fa-user"></i>
+            Profile
+          </div></a>
+      
+          <!-- Shorts -->
+          <a href="shorts.html"></a><div class="nav-item" onclick="selectNav('shorts')">
+            <i class="fa fa-video"></i>
+            Shorts
+          </div></a>
+      
+          <!-- AI -->
+          <a href="conversation.html"><div class="nav-item" onclick="selectNav('ai')">
+          <i class="fa-solid fa-message"></i> 
+            AI
+          </div></a>
+        </div>
+
     </div>
 
-   
-    <i class="far fa-heart video-control-icon"></i>
-    <i class="far fa-comment video-control-icon"></i>
-    <i class="far fa-save video-control-icon"></i>
-    <i class="fas fa-share-alt video-control-icon"></i>
-  </div>
-  </div>
+    </div>
 
-  <script>
-    const videos = document.querySelectorAll('.video-container');
-    let currentVideoIndex = 0;
-  
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  
-     
-      if (scrollPosition > window.innerHeight) {
-        videos[currentVideoIndex].style.display = 'none';
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        videos[currentVideoIndex].style.display = 'block';
-      }
-    });
-  </script>
+    <script>
+        const videos = document.querySelectorAll('.video-container');
+        let currentVideoIndex = 0;
+
+        function onPlayerReady(event) {
+            event.target.setVolume(0);
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === 0) {
+                videos[currentVideoIndex].style.display = 'none';
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                videos[currentVideoIndex].style.display = 'block';
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollPosition > window.innerHeight) {
+                videos[currentVideoIndex].style.display = 'none';
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                videos[currentVideoIndex].style.display = 'block';
+            }
+        });
+    </script>
+
+
+    <script>
+
+        // nav bar selection
+        function selectNav(navName) {
+            // Reset all to not selected
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(navItem => navItem.classList.remove('selected'));
+
+            // Turn on the selected nav item
+            const selectedNavItem = document.querySelector(`.nav-item.${navName}`);
+            selectedNavItem.classList.add('selected');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
 
   <script>
 var shortiesHTML=[

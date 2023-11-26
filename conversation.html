@@ -356,7 +356,7 @@ body {
 }
 
  /* Media query so it is responsive */
- @media (max-width: 600px) {
+  @media (max-width: 600px) {
     .header-container {
         flex-direction: column;
         padding: 10px;
@@ -376,11 +376,14 @@ body {
         bottom: 0;
         width: 100%;
         max-width: none;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .nav-item {
         padding: 10px;
         height: 60px;
+        flex-shrink: 0; 
     }
 
     .nav-item i {
@@ -390,6 +393,7 @@ body {
 
     .content-container {
         padding-top: 10px;
+        margin-top: 70px; 
     }
 
     .conversation {
@@ -517,31 +521,31 @@ body {
    
     <div class="nav-container">
     
-      <div class="nav-item selected" onclick="selectNav('home')">
+      <a href="index.html"><div class="nav-item selected" onclick="selectNav('home')">
         <i class="fa fa-house"></i>
         Home
-      </div>
+      </div></a>
   
       <!-- Playlists -->
-      <div class="nav-item" onclick="selectNav('playlists')">
+      <a href="playlist.html"></a><div class="nav-item" onclick="selectNav('playlists')">
         <i class="fa fa-music"></i>
         Playlists
-      </div>
+      </div></a>
   
-      <!-- Profile -->
-      <div class="nav-item" onclick="selectNav('profile')">
+      <!-- Artist -->
+      <a href="artist.html"></a><div class="nav-item" onclick="selectNav('artist')">
         <i class="fa-solid fa-user"></i>
         Profile
-      </div>
+      </div></a>
   
       <!-- Shorts -->
-      <div class="nav-item" onclick="selectNav('shorts')">
+      <a href="shorts.html"></a><div class="nav-item" onclick="selectNav('shorts')">
         <i class="fa fa-video"></i>
         Shorts
-      </div>
+      </div></a>
   
-     <!-- AI -->
-     <a href="conversation.html"><div class="nav-item" onclick="selectNav('ai')">
+      <!-- AI -->
+      <a href="conversation.html"><div class="nav-item" onclick="selectNav('ai')">
       <i class="fa-solid fa-message"></i> 
         AI
       </div></a>

@@ -80,35 +80,36 @@
         <p class="artist" id="artistplayer">The Marias</p>
       </div>
   
-      
+      <button class="song-control-icon" onclick="changeSong(-1)"><i class="fa fa-backward-step"></i></button>
       <button class="play-button" id="playButton"><i class="far fa-circle-play"></i></button>
+      <button class="song-control-icon" onclick="changeSong(1)"><i class="fa fa-forward-step"></i></button>
     </div>
   
    
     <div class="nav-container">
     
-      <div class="nav-item selected" onclick="selectNav('home')">
+      <a href="index.html"><div class="nav-item selected" onclick="selectNav('home')">
         <i class="fa fa-house"></i>
         Home
-      </div>
+      </div></a>
   
       <!-- Playlists -->
-      <div class="nav-item" onclick="selectNav('playlists')">
+      <a href="playlist.html"></a><div class="nav-item" onclick="selectNav('playlists')">
         <i class="fa fa-music"></i>
         Playlists
-      </div>
+      </div></a>
   
-      <!-- Profile -->
-      <div class="nav-item" onclick="selectNav('profile')">
+      <!-- Artist -->
+      <a href="artist.html"></a><div class="nav-item" onclick="selectNav('artist')">
         <i class="fa-solid fa-user"></i>
         Profile
-      </div>
+      </div></a>
   
       <!-- Shorts -->
-      <div class="nav-item" onclick="selectNav('shorts')">
+      <a href="shorts.html"></a><div class="nav-item" onclick="selectNav('shorts')">
         <i class="fa fa-video"></i>
         Shorts
-      </div>
+      </div></a>
   
       <!-- AI -->
       <a href="conversation.html"><div class="nav-item" onclick="selectNav('ai')">
@@ -142,36 +143,57 @@
   </script>
   <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
 
-<script>
-var reproductorHTML= "";
 
-var  temas= [{
-    song: "I don't know you", 
-    artista:  "The Marias",
-    duración: "3:28",
-    imageSrc: url('https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600'),
-  },{
-    song: "On Verra", 
-    artista:  "Nekfeu",
-    duración: "3:28",
-    imageSrc: url('https://images.pexels.com/photos/2479321/pexels-photo-2479321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+  <script>
+    var reproductorHTML = "";
+    var temas = [
+      {
+        song: "I don't know you",
+        artista: "The Marias",
+        duración: "3:28",
+        imageSrc: 'https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        song: "On Verra",
+        artista: "Nekfeu",
+        duración: "3:28",
+        imageSrc: 'https://images.pexels.com/photos/2479321/pexels-photo-2479321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      },
+      {
+        song: "Pamplemosse",
+        artista: "Flavien Berger",
+        duración: "3:28",
+        imageSrc: 'https://images.pexels.com/photos/17099461/pexels-photo-17099461/free-photo-of-a-woman-in-a-black-dress-holding-a-drink.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      },
+      {
+        song: "Brutalisme",
+        artista: "Flavien Berger",
+        duración: "3:28",
+      }
+    ];
   
-  },{
-    song: "Pamplemosse", 
-    artista:  "Flavien Berger",
-    duración: "3:28",
-    imageSrc: url('https://images.pexels.com/photos/17099461/pexels-photo-17099461/free-photo-of-a-woman-in-a-black-dress-holding-a-drink.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-  },{
-    song: "Brutalisme", 
-    artista:  "Flavien Berger",
-    duración: "3:28",
-  }];
-
-const imageElement = document.getElementById('imgplayer');
-const songElement = document.getElementById('songplayer');
-const artistElement = document.getElementById('artistplayer');
-
-</script>
+    const imageElement = document.getElementById('imgplayer');
+    const songElement = document.getElementById('songplayer');
+    const artistElement = document.getElementById('artistplayer');
+    let currentSongIndex = 0;
+  
+    
+    function changeSong(offset) {
+      currentSongIndex = (currentSongIndex + offset + temas.length) % temas.length;
+      updatePlayer();
+    }
+  
+   
+    function updatePlayer() {
+      const currentSong = temas[currentSongIndex];
+      imageElement.src = currentSong.imageSrc;
+      songElement.textContent = currentSong.song;
+      artistElement.textContent = currentSong.artista;
+    }
+  
+    
+    updatePlayer();
+  </script>
 
 
 <!-- 
