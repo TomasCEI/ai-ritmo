@@ -734,16 +734,17 @@ legend {
     position: absolute;
     align-items: center;
     margin: 5%;
+    margin-top: 50px;
 }
 
 .Shorts-descp{
     color: var(--default-text-color);
     position: absolute;
-    margin: 5%;
-    width: 200px;
+    width: 300px;
     height: 100px;
-    bottom: 50px;
-    left: 10px;
+    margin-top: 700px;
+    text-align: left;
+    margin-right: 50px;
 }
 
 .Shorts-nav{
