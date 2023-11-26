@@ -89,7 +89,7 @@ a{text-decoration: none;}
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 90px;
+    bottom: 85px;
     background-color: var(--default-box-color);
     height: 8%;
     width: 100vw;
@@ -244,7 +244,7 @@ a{text-decoration: none;}
 }
 
 
-.Playlist-img {
+.Playlist-img-play {
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -264,6 +264,12 @@ a{text-decoration: none;}
 
 .Fieldset-height {
     max-height: 150px;
+    overflow: scroll;
+}
+
+.Fieldset-height-profile {
+    max-height: 100px;
+    width: 80%;
     overflow: scroll;
 }
 
@@ -307,6 +313,18 @@ a{text-decoration: none;}
 
 }
 
+.SearchText-popup-perfil{padding: 10px;
+    padding-right: 70px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 45%;
+    height: 10px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-left: 30px;
+
+}
 
 
 
@@ -520,6 +538,8 @@ a{text-decoration: none;}
 
 /*---------------------------------Popup---------------------------------------*/
 
+
+
 .Overlay {
     position: fixed;
     top: 0;
@@ -532,11 +552,47 @@ a{text-decoration: none;}
     opacity: 0;
 }
 
+
 .Overlay:target {
     visibility: visible;
     opacity: 1;
 }
 
+.Popup-profile {
+    margin: 180px auto;
+    margin-top: 90px;
+    padding: 40px 20px 20px 20px;
+    background: var(--default-box-color);
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+    transition: all 3s ease-in-out;
+}
+.Popup-profile .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--default-text-color);
+}
+.Popup-profile .Content {
+    max-height: 50%;
+    overflow: auto;
+    font-size: 20px;
+    color: var(--default-text-color);
+    text-align: left;
+    padding: 0px 10px;
+    width: 500px;
+}
+
+.Popup-profile h2 {
+    margin-top: 0;
+    color: var(--default-text-color);
+    text-align: center;
+}
 .Popup {
     margin: 180px auto;
     padding: 40px 20px 20px 20px;
@@ -876,6 +932,8 @@ legend {
 .Profile{
     margin-bottom: 200px;
 }
+
+.Popup-h3-perfil{ color: var(--default-text-color);}
 
 .Bio{
     background-color: var(--default-box2-color);
