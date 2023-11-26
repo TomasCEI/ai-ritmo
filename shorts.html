@@ -21,13 +21,8 @@
 
         <div class="Shorts-top" onclick="changeShort(1)">
             <h3 class="Shorts-name" id="Shorts-name">Taylor Swift</h3>
-            <div class="Shorts-nav">
-                <a class="Shorts-vol" href="#" onclick="toggleMute()"><i class="fa-solid fa-volume-low"></i></a>
-                <a href="#"><i class="fa-solid fa-bookmark"></i></a>
-                <a href="#"></a>
-                <a href="#"></a>
-            </div>
-            <video class="Shorts-vd" autoplay muted loop controls>
+            <p class="Shorts-descp" id="Shorts-descp"><b>Taylor Swift: </b>The Eras Tour Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <video id="Short-01" class="Shorts-vd" autoplay muted loop>
                 <source src="./img/shorts/Short-01.mp4" type="video/mp4">
             </video>
         </div>
@@ -116,6 +111,14 @@
         </div> --->
     </main>
 
+    <!-------------Navegación para interactuar con los videos (detro no funciona)-------------------->
+    <div class="Shorts-nav">
+        <a class="Shorts-btn" href="#" onclick="toggleMute()"><i class="fa-solid fa-volume-low"></i></a>
+        <a class="Shorts-btn" href="#"><i class="fa-solid fa-bookmark"></i></a>
+        <a class="Shorts-btn" href="#"><i class="fa-solid fa-user-plus"></i></a>
+        <a class="Shorts-btn" href="#"><i class="fa-solid fa-comments"></i></a>
+    </div>
+
     <!-------------Menú Bottom Bar-------------------->
     <footer class="MenuBottom">
         <a class="MenuBottom-btn" href="../Index.html"><img class="Logo-icon" src="./img/logo/pulpologo.svg"
@@ -136,7 +139,7 @@
 
 
         // Botón de activar sonido
-        var volumen = document.querySelector('.Shorts-vd');
+        var volumen = document.getElementById('Short-01');
 
         function toggleMute() {
             if (volumen.muted) {

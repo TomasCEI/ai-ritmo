@@ -121,6 +121,13 @@
 
 
 
+
+
+
+    </div>
+
+
+
     <script>
 
         function myFunction2() {
@@ -128,107 +135,21 @@
             element.classList.toggle("light-mode");
         }
 
-        </script>
-    <div class="Options">
-
-        <div class="Options-emotion">
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-sun"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-cloud-bolt"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-cloud-rain"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-tornado"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-moon"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-mug-hot"></i>
-
-            </div>
-            <div class="Options-emotion-general">
-                <i class="fa-solid fa-champagne-glasses"></i>
-
-            </div>
-
-        </div> <br>
-        <div class="Search-container-center">
-            <form id="Search-form" action="/HTML/Playlist.html">
-                <input class="Search-text-ai" type="text" placeholder="Introduce tu texto">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-        <div class="Micro-icon">
-        <i class="fa-solid fa-microphone"></i>
-        </div>
-
-    </div>
-
-    <!-------------Reproductor-------------------->
-
-    <div class="Reproductor">
-
-        <div class="Rep-song"> <img id="myImage" src="/img/playlist/Playlist-Ateez.jpeg" alt="Ateez"> 
-         </div>
-        <div class="Rep-name-song">
-        <h2 class="Rep-h2">Answer - Ateez</h2>
-        <div class="Line"> <div class="Rep-circle"></div>
-            <div class="Rep-icons">
-                <i class="fa-solid fa-forward fa-rotate-180"></i>
-                <div class="Play-icons"><i class="fa-solid fa-pause"></i>
-                <i class="fa-solid fa-play"></i></div>
-                <i class="fa-solid fa-forward"  onclick="changeImage()"></i>
-            </div></div>
-
-        </div>
-    </div>
 
 
+
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("Song")) {
+                image.src = "/img/playlist/Playlist-Ateez.jpeg";
+            } else {
+                image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
+            }
+        }
     </script>
 
 
 
-
- </div>
-
-    
-
- <script>       
-     
-    function myFunction2() {
-       var element = document.body;
-       element.classList.toggle("light-mode");}
-       
-       
-
-
-       function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("Song")) {
-        image.src = "/img/playlist/Playlist-Ateez.jpeg";
-    } else {
-        image.src = "/img/portadasCanciones/Portada-Ftisland.jpg";
-    } 
-}
-       </script>
-
-
-    
 </body>
 
 </html>
