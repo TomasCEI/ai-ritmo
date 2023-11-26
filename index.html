@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <!-- Importing styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="sign-up-container">
+    <header class="home-hero-img-container">
+        <img src="/img/logo-for-dark-background.png" alt="" width="150px">
+        <div>
+            <h1>Welcome to Ai Ritmo</h1>
+            <p>Your Ai Music app <br>Join today for a unique
+                musical journey
+            </p>
+        </div>
+    </header>
+    <div class="pages">
+        <div id="sign-up-page">
+            <h2>Sign up</h2>
+            <button onclick="changePage(1)" class="sign-up-log-in-button">Log in</button>
+            <form action="" class="sign-up-log-in-form">
+                <label for="sign-up-form-email" class="label-email">E-mail</label>
+                <input id="sign-up-form-email" type="email">
+                <label for="sign-up-form-password" class="label-password">Password</label>
+                <input id="sign-up-form-password" type="password">
+                <label for="sign-up-form-password-confirm" class="label-password">Confirm password</label>
+                <input id="sign-up-form-password-confirm" type="password">
+                <label for="policy"><input type="checkbox" id="policy" name="accept_policy"> I accept the <a
+                        href="./policy.html">privacy policy</a></label>
+            </form>
+            <button class="sign-up-log-in-button">Submit</button>
+        </div>
+        <div id="log-in-page">
+            <h2>Log in</h2>
+            <button onclick="changePage(0)" class="sign-up-log-in-button">Sign up</button>
+            <form action="" class="sign-up-log-in-form">
+                <label for="log-in-form-email" class="label-email">E-mail</label>
+                <input id="log-in-form-email" type="email">
+                <label for="log-in-form-password" class="label-password">Password</label>
+                <input id="log-in-form-password" type="password">
+                <label for="log-in-reminder"><input type="checkbox" id="log-in-reminder" name="log-in-reminder">
+                    Remember my info</label>
+                <a href="hjj">Forgot my password</a>
+            </form>
+            <button class="sign-up-log-in-button">Submit</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function changePage(pageIndex) {
+            const pagesContainer = document.querySelector('.pages');
+
+
+            const offset = pageIndex * -(100 / 2); // Ancho de cada página (100%) multiplicado por el índice
+
+            pagesContainer.style.transform = `translateX(${offset}%)`;
+        }
+        
+    </script>
+    
+
+</body>
+
+</html>

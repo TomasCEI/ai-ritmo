@@ -1,0 +1,583 @@
+/* Styles for Ai Ritmo */
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&family=Roboto+Condensed:wght@300;700&display=swap');
+
+/* Initial format */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --main-background: #121212;
+  --yellow: #FFD700;
+  --purple-light: #9381FF;
+  --purple-dark: #7a5af5;
+  --orange: #F6AE2D;
+  --grey-content: #9095A1;
+  --grey-background: #3f3f3f;
+  --white-font: #ffffff;
+  --dark-background: #1E2128FF;
+  --search: #333333;
+  --purple: #b18cfe;
+}
+
+body {
+  background-color: black;
+  font-family: 'Poppins';
+}
+
+.body-modif {
+  padding: 2%;
+}
+
+h1 {
+  color: var(--yellow);
+}
+
+h2 {
+  color: var(--purple-dark);
+}
+
+h3 {
+  color: var(--orange);
+}
+
+#artist_container {
+  background-color: var(--main-background);
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 5px;
+  height: 100vh;
+}
+
+#artist_cards_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.artist-main-content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  flex-direction: column;
+  gap: 7px;
+  overflow-y: scroll;
+  max-height: 90%;
+  height: 60%;
+}
+
+#artist-carousel-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  flex-direction: row;
+  gap: 10px;
+  height: 230px;
+  margin: 2%;
+}
+
+.artist-carousel-card {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  min-width: 120px;
+  border-radius: 5px;
+  background-color: var(--grey-background);
+  height: 100%;
+  overflow: hidden;
+}
+
+.artist-carousel-card img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.artist-carousel-card h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 5px;
+}
+
+.artist-carousel-card h3 {
+  font-size: 10px;
+  font-weight: lighter;
+  margin-left: 5px;
+}
+
+.playlist {
+  background-color: var(--main-background);
+  color: var(--gray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playlist-header {
+  padding: 0 3%;
+  margin: 0;
+}
+
+.playlist-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  padding: 0 3%;
+  gap: 1em;
+  overflow-y: scroll;
+  color: var(--grey-background)
+}
+
+.playlist-card {
+  display: flex;
+  border-radius: 5px;
+  background-color: var(--grey-background);
+  height: 70px;
+  gap: 0.8em;
+  align-items: center;
+  color: var(--main-background);
+}
+
+.playlist-card img {
+  height: 70px;
+  aspect-ratio: 1;
+  border-radius: 5px;
+}
+
+.playlist-card-body {
+  flex-grow: 1;
+  padding: 5px 0px;
+}
+
+.playlist-card h1 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.playlist-card h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.playlist-card h3 {
+  font-size: 10px;
+  font-weight: lighter
+}
+
+.playlist-card-body span {
+  font-size: 12px;
+}
+
+.playlist-card>i {
+  width: 10px;
+  color: var(--yellow);
+}
+
+/* Header Container */
+.header-container-dera {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 5px;
+}
+
+/* Greeting Message */
+.greeting {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Profile Picture */
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('https://images.pexels.com/photos/7090876/pexels-photo-7090876.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Search Container */
+.search-container-dera {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1E2128FF;
+  border-radius: 8px;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+/* Search Input */
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  outline: none;
+}
+
+/* Search Icon */
+.search-icon {
+  color: #b18cfe;
+  margin-right: 10px;
+}
+
+/* Main Container (The Player and Nav Bar) */
+.main-container-footer {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    background: #121212; 
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+    margin-top: auto;
+    margin: 0 auto;
+    padding-top: 126px;
+}
+
+/* Player Container */
+.player-container {
+  width: 100%;
+    height: 70px;
+    background: var(--dark-background);
+    border-radius: 8px;
+    box-shadow: 0px 4px 9px #171a1f, 0px 0px 2px #171a1f;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top:20px;
+    position: fixed;
+    bottom: 70px;
+    z-index: 1000;
+    margin-bottom: -10px;
+}
+
+/* Song Cover */
+.song-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Song Info */
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.artist {
+  margin: 0;
+  color: #B3B3B3;
+}
+
+/* Play Button */
+.play-button {
+  background-color: transparent;
+    color: #b18cfe;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+
+/* Play Button Hover Effect */
+.play-button:hover {
+  color: #b18cfe;
+}
+
+/* Nav Bar Container */
+.nav-container-footer {
+  width: 100%;
+  height: 70px;
+  background: #1E2128FF; 
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin-top: 0px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+  margin: 5px;
+}
+
+/* Nav Bar Item */
+.nav-item {
+  padding: 10px 19.5px;
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    background: #000000FF; 
+    border-radius: 0px; 
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    height: 70px;
+  }
+
+/* Nav Bar Hover Effect */
+.nav-item:hover {
+  color: #b18cfe;
+  background: #00000080;
+}
+
+/* Nav Bar Selected Item */
+.nav-item.selected {
+  position: relative;
+  font-weight: 700;
+  color: #b18cfe;
+  background: #000000FF;
+}
+
+/* Icon styles */
+.nav-item i {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+/* Content Container */
+.content-container {
+  width: 90%;
+  max-width: 800px;
+  background: #121212;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+/* Title styles */
+.title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* See More Button */
+.see-more-button {
+  background: #1E2128FF;
+  color: #b18cfe;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* See More Button Hover Effect */
+.see-more-button:hover {
+  background: #00000080;
+  color: #ffffff;
+}
+
+/* Genre and Artist Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* Genre and Artist Item */
+.grid-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 120px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Media query so it is responsive */
+@media (max-width: 600px) {
+
+  .search-container,
+  .player-container,
+  .nav-container,
+  .content-container {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+/* Styles for Welcome page */
+.welcome-hero-img-container {
+  background-image: url("/img/playlist-05.jpg");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pages {
+  
+  transition: transform 1s ease;
+  overflow: hidden;
+  width: 200vw;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+#sign-up-page {
+  background-color: var(--main-background);
+  width: 100%;
+  justify-content: center;
+  padding: 5%;
+}
+
+#log-in-page {
+  background-color: var(--main-background);
+  width: 100%;
+  justify-content: center;
+  padding: 5%;
+}
+
+.sign-up-log-in-form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  margin-top: 30px;
+}
+
+.sign-up-log-in-form input {
+  padding: 5px;
+}
+
+.label-email {
+  position: relative;
+}
+
+.label-email:before {
+  position: absolute;
+  content: "✉️";
+  right: 5px;
+  top: calc(100% + 5px);
+}
+
+.label-password {
+  position: relative;
+}
+
+.label-password:before {
+  position: absolute;
+  content:"👈";
+  right: 5px;
+  top: calc(100% + 5px);
+}
+
+#artistTitle {
+  height: 800px;
+  background-image: url("/img/playlist-09.jpg");
+}
+
+
+/* Sign up - Log in button */
+.sign-up-log-in-button {
+  margin-top: 5px;
+  background-color: var(--purple-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  cursor: pointer;
+  font-weight: 200;
+}
+
+/* Sign up - Log in button Hover Effect */
+.sign-up-log-in-button:hover {
+  color: #b18cfe;
+}
+
+/* Styles for Home page */
+.home-hero-img-container {
+  background-image: url("/img/playlist-05.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px; 
+}
+#home-recommended-song-container {
+  display: flex;
+  background-color: var(--main-background);
+  color: var(--grey-content);
+  height: 90px;
+  font-weight: 200;
+  padding: 2%;
+  line-height: 22px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: var(--purple-light);
+  text-decoration: underline;
+}
+

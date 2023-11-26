@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Importing styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body-modif">
+    <nav>
+        <div class="header-container-dera">
+
+            <div class="profile-container">
+                <div class="profile-picture"></div>
+            </div>
+            <h2>Hello Anne</h2>
+
+        </div>
+
+        <div class="search-container-dera">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+    </nav>
+    <header class="home-hero-img-container">
+        <img src="/img/logo-for-dark-background.png" alt="" width="150px">
+        <div>
+            <h1>Welcome to Ai Ritmo</h1>
+            <p>Your Ai Music app <br>Join today for a unique
+                musical journey
+            </p>
+        </div>
+    </header>
+    <div id="home-recommended-song-container">
+        <div>
+            <p>Today´s song for you</p>
+            <h2>Ritual</h2>
+            <p>Paax</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-play"></i>
+        </div>
+
+    </div>
+    <h3>You might also like</h3>
+    <div id="artist-carousel-container">
+    </div>
+
+
+    <!--Navigation bar in footer-->
+    <footer>
+        <!-- Main Container (The Player and Nav Bar) -->
+        <div class="main-container-footer">
+            <div class="nav-container-footer">
+
+                <a href="home.html">
+                    <div class="nav-item selected" onclick="selectNav('home')">
+                        <i class="fa fa-house"></i>
+                        Home
+                    </div>
+                </a>
+
+                <!-- Playlists -->
+                <a href="playlists.html">
+                    <div class="nav-item" onclick="selectNav('playlists')">
+                        <i class="fa fa-music"></i>
+                        Playlists
+                    </div>
+                </a>
+
+                <!-- Profile -->
+                <a href="artist.html">
+                    <div class="nav-item" onclick="selectNav('artist')">
+                        <i class="fa-solid fa-user"></i>
+                        Artist
+                    </div>
+                </a>
+
+                <!-- Shorts -->
+                <a href="shorts.html">
+                    <div class="nav-item" onclick="selectNav('shorts')">
+                        <i class="fa fa-video"></i>
+                        Shorts
+                    </div>
+                </a>
+
+                <!-- AI -->
+                <div class="nav-item" onclick="selectNav('ai')">
+                    <i class="fa-solid fa-message"></i>
+                    AI
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!--Import Font awesome-->
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+    <!-- Script to play button hover effect from play to pause -->
+    <script>
+
+
+        // nav bar selection
+        function selectNav(navName) {
+            // Reset all to not selected
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(navItem => navItem.classList.remove('selected'));
+
+            // Turn on the selected nav item
+            const selectedNavItem = document.querySelector(`.nav-item.${navName}`);
+            selectedNavItem.classList.add('selected');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+    <script src="homescript.js"></script>
+
+</body>
+
+</html>

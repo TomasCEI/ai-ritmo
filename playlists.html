@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+
+    <!-- Importing styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body-modif">
+    <div>
+        <!--... 
+       <span><i class="fa-solid fa-house"></i>
+        </span>
+        <h3>Home</h3>*/ -->
+
+    </div>
+
+    <div class="playlist">
+        <nav>
+
+            <div class="header-container-dera">
+
+                <div class="profile-container">
+                    <div class="profile-picture"></div>
+                </div>
+                <h2>Hello Anne</h2>
+
+            </div>
+            <div class="search-container-dera">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+        </nav>
+        <div class="playlist-header">
+            <h1>Your Library</h1>
+        </div>
+
+        <!--Main content with playlists cards -->
+        <div id="playlist_cards_container" class="playlist-main">
+
+        </div>
+
+        <!--Navigation bar in footer-->
+        <footer>
+            <!-- Main Container (The Player and Nav Bar) -->
+            <div class="main-container-footer">
+
+                <div class="player-container">
+                    <img src="https://images.pexels.com/photos/7035238/pexels-photo-7035238.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Song Cover" class="song-cover">
+
+                    <div class="song-info">
+                        <h3 class="song-title">Ruthless</h3>
+                        <p class="artist">The Marias</p>
+                    </div>
+
+                    <button class="play-button" id="playButton"><i class="far fa-circle-play"></i></button>
+                </div>
+
+                <div class="nav-container-footer">
+
+                    <a href="home.html">
+                        <div class="nav-item selected" onclick="selectNav('home')">
+                            <i class="fa fa-house"></i>
+                            Home
+                        </div>
+                    </a>
+
+                    <!-- Playlists -->
+                    <a href="playlists.html">
+                        <div class="nav-item" onclick="selectNav('playlists')">
+                            <i class="fa fa-music"></i>
+                            Playlists
+                        </div>
+                    </a>
+
+                    <!-- Profile -->
+                    <a href="artist.html">
+                        <div class="nav-item" onclick="selectNav('artist')">
+                            <i class="fa-solid fa-user"></i>
+                            Artist
+                        </div>
+                    </a>
+
+                    <!-- Shorts -->
+                    <a href="shorts.html">
+                        <div class="nav-item" onclick="selectNav('shorts')">
+                            <i class="fa fa-video"></i>
+                            Shorts
+                        </div>
+                    </a>
+
+                    <!-- AI -->
+                    <div class="nav-item" onclick="selectNav('ai')">
+                        <i class="fa-solid fa-message"></i>
+                        AI
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--Import Font awesome-->
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+    <!-- Script to play button hover effect from play to pause -->
+    <script>
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('mouseenter', function () {
+            playButton.innerHTML = '<i class="far fa-circle-pause"></i>';
+        });
+
+        playButton.addEventListener('mouseleave', function () {
+            playButton.innerHTML = '<i class="far fa-circle-play"></i>';
+        });
+
+        // nav bar selection
+        function selectNav(navName) {
+            // Reset all to not selected
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(navItem => navItem.classList.remove('selected'));
+
+            // Turn on the selected nav item
+            const selectedNavItem = document.querySelector(`.nav-item.${navName}`);
+            selectedNavItem.classList.add('selected');
+        }
+    </script>
+
+    <script src="/playlistscript.js"></script>
+</body>
+
+</html>

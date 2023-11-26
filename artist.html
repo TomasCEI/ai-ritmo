@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+
+    <!-- Importing styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="artist_container">
+        <h2 style="background-color: black;">Artist</h2>
+        <div class="artist-main-content">
+            <img src="img/playlist-05.jpg" alt="" id="artistTitle">
+         
+            <div class="search-container-dera">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+            <div id="artist_cards_container">
+                
+            </div>
+
+        </div>
+
+        <h3>You might also like</h3>
+        <div id="artist-carousel-container"> 
+        </div>
+   
+   </div>
+    <!--Navigation bar in footer-->
+    <footer>
+        <!-- Main Container (The Player and Nav Bar) -->
+        <div class="main-container-footer">
+            <div class="nav-container-footer">
+
+                <a href="home.html"><div class="nav-item selected" onclick="selectNav('home')">
+                    <i class="fa fa-house"></i>
+                    Home
+                </div></a>
+
+                <!-- Playlists -->
+                <a href="playlists.html"><div class="nav-item" onclick="selectNav('playlists')">
+                    <i class="fa fa-music"></i>
+                    Playlists
+                </div></a>
+
+                <!-- Profile -->
+                <a href="artist.html"><div class="nav-item" onclick="selectNav('artist')">
+                    <i class="fa-solid fa-user"></i>
+                    Artist
+                </div></a>
+
+                <!-- Shorts -->
+                <a href="shorts.html"><div class="nav-item" onclick="selectNav('shorts')">
+                    <i class="fa fa-video"></i>
+                    Shorts
+                </div></a>
+
+                <!-- AI -->
+                <div class="nav-item" onclick="selectNav('ai')">
+                    <i class="fa-solid fa-message"></i>
+                    AI
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/bfc131cf9b.js" crossorigin="anonymous"></script>
+    <script src="homescript.js"></script>
+    <script src="/artistscript.js"></script>
+
+</body>
+
+</html>
