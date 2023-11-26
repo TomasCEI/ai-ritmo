@@ -1,7 +1,6 @@
-
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     font-family: 'Montserrat';
 }
 
@@ -24,7 +23,7 @@ div {
     margin: 0;
     position: fixed;
     width: 100vw;
-   
+
 }
 
 
@@ -37,35 +36,55 @@ div {
 
 .Header a img {
     margin: 0;
-   
+
 }
 
 .Imagencancion img {
     width: 235px;
-height: 235px;
-border-radius: 24px;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 235px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 60px;
 
 }
 
+.Contenedor-imagen {
+    width: 100vw;
+    height: 255px;
+
+    background: url(../images/Captura\ de\ pantalla\ 2023-11-17\ a\ las\ 16.50\ 1.svg);
+    background-position: center;
+    background-size: 100%;
+    width: 100vw;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.Lirycs {
+    width: 250px;
+height: 200px;
+background-color: #FFDEEE;;
+}
 
 
 
 /*ProgressBar*/
 
 .ProgressBarPink {
-   
-    width:75%;
-height: 10px;
-background-color: #CDD9E3;
-border-radius: 24px;
+
+    width: 75%;
+    height: 10px;
+    background-color: #CDD9E3;
+    border-radius: 24px;
 }
 
 .ProgressBar {
     width: 207px;
     height: 10px;
     border-radius: 24px;
-    background-color:var(--links);
+    background-color: var(--links);
 }
 
 .ProgressBarText {
@@ -75,4 +94,120 @@ border-radius: 24px;
     font-family: 'Montserrat';
     font-size: 12px;
     font-weight: 200;
+}
+
+.Contentmusic {
+
+    background-color: #FDD4D8;
+    height: 385px;
+    width: 100vw;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.Subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.CardMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    width: auto;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+}
+
+.CardMusic a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.CardMusic img {
+    width: 68px;
+    height: 68px;
+    border-radius: 8px;
+    margin-top: 50px;
+
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.CardText H5 {
+    font-size: 16px;
+    width: 200px;
+}
+
+.CardText H6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+    width: 200px;
+}
+
+.CardsScroll {
+    margin-bottom: 60px;
+    overflow: scroll;
+}
+
+
+.ReproductorMusica {
+    
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+}
+
+.ForwarDerecha {
+    padding: 8px;
+}
+
+.Pause {
+    width: 80px;
+height: 80px;
+
+}
+
+.Pause img {
+    background-color:#6C63FF ;
+    border-radius: 160px;
+    padding: 16px;
+}
+
+.CARDMusic {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.Lirycs {
+background-color: #FFDEEE;
+padding: 8px;
+margin-left: 0;
+margin-right: 90px;
+margin-bottom: 24px;
+border-radius: 8px;
+height: auto;
+}
+
+.Lirycs span {
+    color: rgba(255, 22, 134, 0.22);
+    font-weight: 500;
+}
+
+.Lirycs h6 {
+    font-size: 14px;
+    color: var(--links);
 }

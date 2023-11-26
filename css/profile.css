@@ -1,0 +1,234 @@
+body {
+    overflow: hidden;
+    
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% * 2);
+    height: 100vh;
+    margin-top: 14%;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.page {
+    flex: 1;
+}
+
+#page1 {
+    background-color: inherit;
+}
+
+#page2 {
+    background-color: var(--background1);
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow-y: hidden;
+}
+
+.Header {
+    background-color: #FDD4D8;;
+    position: fixed;
+    top: 0;
+}
+
+.UserProfile {
+
+    background-color: #FDD4D8;
+    height: 400px;
+    width: 100vw;
+    border-radius: 0px 0px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+   
+}
+
+.Contenedor-imagen {
+    width: 80%;
+    height: 75%;
+    margin: 0 auto;
+    
+    background: url(../img/profile-img.avif);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 50%;
+    box-shadow: 3px 4px 10px rgba(65, 65, 65, 0.466);
+    margin-top: 16px;
+}
+
+
+.UserProfile p {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.UserProfile h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-top: 0;
+    color: var(--links);
+}
+
+
+
+.Subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.CardMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: auto;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    
+}
+
+.CardMusic img {
+    width: 68px;
+height: 68px;
+border-radius: 8px;
+
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+.CardText H5 {
+    font-size: 16px;
+    width: 200px;
+    margin-top: 10;
+    margin-bottom: 0;
+}
+
+.CardText H6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+    width: 200px;
+    margin-top: 0;
+}
+
+.CardsScroll {
+    margin-bottom: 60px;
+    overflow: scroll;
+}
+
+.SectionTitle {
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.ConfigContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ConfigContainer--toogles {
+    margin-bottom: 0;
+    gap: 8px;
+}
+
+.ConfigContainer h2 {
+    margin-bottom: 10px;
+}
+
+.ConfigContainer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ConfigContainer-section--row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.ConfigContainer-section h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.ConfigContainer-section p {
+    margin: 0;
+}
+
+.Switch input {
+    display: none;
+}
+
+.Switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.Switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background2);
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.Switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 20px;
+  }
+  
+  input:checked + .Switch-slider {
+    background-color: var(--links);
+  }
+  
+  input:focus + .Switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .Switch-slider:before {
+    transform: translateX(26px);
+  }
+
+.ConfigContainer-table {
+    text-align: left;
+}
+
+.ConfigContainer-table tr {
+    height: 45px;
+}
+
+.ConfigContainer-table tr td {
+    text-align: right;
+}

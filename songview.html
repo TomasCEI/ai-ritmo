@@ -20,7 +20,7 @@
     
 
     <div class="Aitman">
-        <a href="#">
+        <a id="ModalBtn">
         </a>
     </div>
 
@@ -70,7 +70,7 @@
 
     </div>
 
-
+<div class="CARDMusic">
     <div class="Imagencancion">
         <img src="images/Queen.svg" alt="">
     </div>
@@ -82,6 +82,8 @@
 
     </div>
 
+
+
     <div class="ProgressBarPink">
         <div class="ProgressBar">
         </div>
@@ -90,12 +92,120 @@
             <p>3:28</p>
             <p>2:25</p>
         </div>
+    </div>
 
+
+    <div class="ReproductorMusica">
+     
+
+        <div class="ForwarDerecha">
+            <img src="icons/fast forward.png" alt="">
+        </div>
+
+        <div class="Pause">
+            <img src="icons/pause.svg" alt="">
+        </div>
+
+        <div class="ForwardIzquierda">
+            <img src="icons/fast forward-1.png" alt="">
+        </div>
     </div>
 
 
 
 
 
+<div class="Lirycs">
+   <h6> I'm on the highway </h6>
+   <span> to hell On the highway to hell Highway to hellI'm on the highway to hell
+    No stop signsSpeed limitNobody's </span>
+</div>
+
+</div>
+
+
+    <!-- //
+    
+    <script>
+    
+    var modal = document.getElementById("AitmanModal")
+    var btn = document.getElementById("ModalBtn")
+    var span = document.getElementsByClassName("CloseModal")[0];
+    
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function() {
+        if (event.target == modal) {
+          modal.style.display = "none"  
+        }
+    }
+    
+    
+    </script>
+
+    <script>
+
+        //var Listadecanciones = ["Tema1", "Tema2", "Tema3", "Tema4"];//
+
+        var Escuchando = {
+            Nombre: "Bohemian Rapsody",
+            Artista: "Queen",
+        };
+
+        var Listadecanciones = [
+            {
+
+                Nombre: "Bohemian Rapsody",
+                Artista: "Queen",
+
+
+            }, {
+
+                Nombre: "I will always love you",
+                Artista: "Whitney Houston",
+                //generos: [  "Pop", "Rock"]//
+
+            }, {
+
+                Nombre: "All Star",
+                Artista: "Smash Mouth",
+
+            }, {
+
+                Nombre: "Dancing Queen",
+                Artista: "ABBA",
+
+            }, {
+
+                Nombre: "Whole Lotta Love",
+                Artista: "Led Zeppelin",
+
+            }, {
+
+                Nombre: "Highway to Hell",
+                Artista: "AC/DC",
+
+            }, {
+
+                Nombre: "Don't Stop Me Now",
+                Artista: "Queen",
+
+            }
+
+
+        ];
+
+
+
+
+
+    </script>-->
+
 </body>
-</html>
+</html> 

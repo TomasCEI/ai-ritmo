@@ -11,19 +11,18 @@ main {
 }
 
 body {
-    margin: 0;
     background-color: black;
-
 }
+
 *{
     box-sizing: border-box;
 } 
+
 
 .Header {
     background: url(../shorts/header-shorts.png);
     background-size: contain;
     position: fixed;
-    width: 100%;
     height: 80px;
     z-index: 1;
     align-items: flex-start;
@@ -32,10 +31,12 @@ body {
 
 .Profile-image {
     margin-top: 15px;
+
 }
 
 .Brand-name {
     margin-top: 10px;
+    padding-right: 120px;
 }
 
 .Brand-name2 {
@@ -48,7 +49,6 @@ body {
     scroll-snap-align: start;
     
 }
-
 
 
 .Short {
@@ -68,3 +68,4 @@ body {
 .Bottombar ul li {
     box-sizing: content-box;
 }
+

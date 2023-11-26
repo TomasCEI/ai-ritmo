@@ -62,7 +62,7 @@
     </div>
 
     <div class="Aitman">
-        <a href="#">
+        <a id="ModalBtn">
         </a>
     </div>
 
@@ -83,6 +83,63 @@
     </div>
 
 </Main>
+
+<div class="Modal" id="AitmanModal">
+    <div class="ModalContent">
+        <div class="ChatHeader">
+            <div class="ModalBrand-name">
+                <h1 class="ModalBrand-name1">AI</h1>
+                <h1 class="ModalBrand-name2">-ritmo</h1>
+            </div>
+            <span class="CloseModal"><img src="icons/remove-close-x.svg" alt=""></span>
+        </div>
+       
+        <div class="ChatAitman">
+            <a></a>
+        </div>
+        <img class="ChatTail" src="icons/chat-tail.svg" alt="">
+        <p class="ChatText">¡Hola, soy Aitman! ¿En qué puedo ayudarte?</p>
+
+        <div class="ChatKeyboard">
+            <div class="ChatKeyboard-text">
+                <input type="text">
+            </div>
+            <div class="ChatKeyboard-icons">
+                <img src="icons/mic-icon.svg">
+                <img src="icons/cam-icon.svg" alt="">
+            </div>
+        </div>
+
+        <div class="ChatContainer">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+var modal = document.getElementById("AitmanModal")
+var btn = document.getElementById("ModalBtn")
+var span = document.getElementsByClassName("CloseModal")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function() {
+    if (event.target == modal) {
+      modal.style.display = "none"  
+    }
+}
+
+
+</script>
     
     
 </body>

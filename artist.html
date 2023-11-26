@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-ritmo</title>
+
+<!----------- LINKS ------------->
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/artist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- --------------------------- -->
+
+</head>
+<body>
+
+    <div class="Bottombar">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="icons/Favoritos.svg" alt="">
+                </a>
+
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="icons/Home.svg" alt="">
+                </a>
+            </li>
+
+
+            <li>
+                <a href="shorts.html">
+                    <img src="icons/Shorts.svg" alt="">
+                </a>
+
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="Header">
+
+        <div class="BackArrow">
+            <a href="songview.html"><img src="icons/chevron-arrow-left.svg" alt=""></a>
+        </div>
+
+        <a href="home.html"><div class="Brand-name">
+            <h1 class="Brand-name1">AI</h1>
+            <h1 class="Brand-name2">-ritmo</h1>
+        </div></a>
+        
+
+    </div>
+
+    <div class="Aitman">
+        <a id="ModalBtn">
+        </a>
+    </div>
+
+
+<div class="pages">
+
+    <div class="page">
+        <div class="UserProfile">
+
+
+            <div class="Contenedor-imagen">
+            </div>
+    
+    
+            <P>Whitney Houston</P>
+            <div class="Subtitle">
+                <h5>4 canciones</h5>
+                <h6>que te gustan de este artista</h6>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="SectionTitle">Canciones populares</h3>
+            <div class="CardMusic">
+                <img src="images/Queen.svg" alt="">
+                <div class="CardText">
+                <h5>I Will Always Love You</h5>
+                <h6>30.000.045 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Whitney.svg" alt="">
+                <div class="CardText">
+                <h5>I Wanna Dance with Somebody</h5>
+                <h6>1.070.456 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+    
+        <div>
+            <div class="CardMusic">
+                <img src="images/Smash.svg" alt="">
+                <div class="CardText">
+                <h5>I Have Nothing</h5>
+                <h6>734.569 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    
+        <div class="CardsScroll">
+            <div class="CardMusic">
+                <img src="images/ABBA.svg" alt="">
+                <div class="CardText">
+                <h5>Higher Love</h5>
+                <h6>557.032 reproducciones</h6>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="Modal" id="AitmanModal">
+    <div class="ModalContent">
+        <div class="ChatHeader">
+            <div class="ModalBrand-name">
+                <h1 class="ModalBrand-name1">AI</h1>
+                <h1 class="ModalBrand-name2">-ritmo</h1>
+            </div>
+            <span class="CloseModal"><img src="icons/remove-close-x.svg" alt=""></span>
+        </div>
+       
+        <div class="ChatAitman">
+            <a></a>
+        </div>
+        <img class="ChatTail" src="icons/chat-tail.svg" alt="">
+        <p class="ChatText">¡Hola, soy Aitman! ¿En qué puedo ayudarte?</p>
+
+        <div class="ChatKeyboard">
+            <div class="ChatKeyboard-text">
+                <input type="text">
+            </div>
+            <div class="ChatKeyboard-icons">
+                <img src="icons/mic-icon.svg">
+                <img src="icons/cam-icon.svg" alt="">
+            </div>
+        </div>
+
+        <div class="ChatContainer">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+var modal = document.getElementById("AitmanModal")
+var btn = document.getElementById("ModalBtn")
+var span = document.getElementsByClassName("CloseModal")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function() {
+    if (event.target == modal) {
+      modal.style.display = "none"  
+    }
+}
+
+
+</script>
+
+    
+</body>
+</html>

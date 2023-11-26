@@ -128,3 +128,9 @@ border-radius: 8px;
     margin-bottom: 60px;
     overflow: scroll;
 }
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
