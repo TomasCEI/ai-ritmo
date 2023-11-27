@@ -15,10 +15,9 @@ La app cuenta con listas de los mejores temas actuales, posibilidad de visualiza
 ![Alt Text](readme/aitman.png)
 
 > [!IMPORTANT]
-> Cualquier parecido con la realidad y el superheroe Batman de DC Universe es pura coincidencia 
+> Cualquier parecido con la realidad y el superheroe Batman de DC Universe es pura coincidencia
 
-![Alt Text](readme/blank-space.png)
-
+![Alt Text](readme/blank-space2.png)
 # Detrás de escena de AI-ritmo 
 
 ## Proceso de diseño
