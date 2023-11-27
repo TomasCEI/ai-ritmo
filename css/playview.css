@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat';
+}
+
+div {
+    margin: 0;
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    background-color: #FDD4D8;;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+   
+}
+
+
+
+.Header a {
+    margin: 0;
+    flex-direction: display;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.Header a img {
+    margin: 0;
+   
+}
+
+
+.Contenedor-imagen {
+    width: 100vw;
+    height: 255px;
+    
+background: url(../images/Captura\ de\ pantalla\ 2023-11-17\ a\ las\ 16.50\ 1.svg);
+background-position: center;
+background-size: 100%;
+width: 100vw;
+height: 255px;
+display: flex;
+flex-direction: column;
+
+   
+}
+
+.Contentmusic p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: 16px;
+}
+
+.Contentmusic h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-top: 4px;
+    color: var(--links);
+}
+
+.Contentmusic h6 {
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 4px;
+    margin-top: 4px;
+    color: black;
+}
+
+.Contentmusic {
+
+    background-color: #FDD4D8;
+    height: 346px;
+    width: 100vw;
+    border-radius: 0px 0px 40px 40px;
+   
+   
+}
+
+.Subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.CardMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    width: auto;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    
+   
+   
+}
+
+.CardMusic img {
+    width: 68px;
+height: 68px;
+border-radius: 8px;
+
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.CardText H5 {
+    font-size: 16px;
+    width: 200px;
+}
+
+.CardText H6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+    width: 200px;
+}
+
+.CardsScroll {
+    margin-bottom: 60px;
+    overflow: scroll;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}

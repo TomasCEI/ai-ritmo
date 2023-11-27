@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playview</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/playview.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="Aitman">
+        <a href="#">
+        </a>
+    </div>
+
+    <!--Menú bottom-->
+
+    <div class="Bottombar">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="icons/Favoritos.svg" alt="">
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Home.svg">
+                    <img src="icons/Home.svg" alt="">
+                </a>
+            </li>
+
+
+            <li>
+                <a href="shorts.html">
+                    <img src="icons/Shorts.svg" alt="">
+                </a>
+
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div class="Header">
+
+
+        <div class="Profile-image">
+            <a href="home.html"><img src="icons/chevron-arrow-left.svg" alt="">
+        </div></a>
+
+        <div class="Brand-name">
+            <h1 class="Brand-name1">AI</h1>
+            <h1 class="Brand-name2">-ritmo</h1>
+
+        </div>
+
+        <a href=""><img src="icons/Favoritos.svg" alt=""></a>
+
+    </div>
+
+    <div class="Contentmusic">
+
+
+        <div class="Contenedor-imagen">
+        </div>
+
+
+        <P>Party Hits</P>
+        <div class="Subtitle">
+            <h5>30 songs</h5>
+            <h6>to sing in the shower</h6>
+        </div>
+    </div>
+
+
+
+    <a href="songview.html">
+    <div id="Listadetemas">
+       
+        <!-- Lista de canciones  
+        <div class="CardMusic">
+            <img src="images/Queen.svg" alt="">
+            <div class="CardText">
+                <h5>Bohemian Rapsody</h5>
+                <h6>Queen</h6>
+            </div>
+        </div>
+  
+        <div class="CardMusic">
+            <img src="images/Whitney.svg" alt="">
+
+            <div class="CardText">
+                <h5>I will always love you</h5>
+                <h6>Whitney Houston</h6>
+            </div>
+        </div>
+   
+        <div class="CardMusic">
+            <img src="images/Smash.svg" alt="">
+            <div class="CardText">
+                <h5>All Star</h5>
+                <h6>Smash Mouth</h6>
+            </div>
+        </div>
+     -->
+        
+        
+    </div>
+</a>
+
+
+    <div class="CardsScroll">
+            <div class="CardMusic">
+                <img src="images/ABBA.svg" alt="">
+                <div class="CardText">
+                    <h5>Dancing Queen</h5>
+                    <h6>ABBA</h6>
+                </div>
+            </div>
+        </div>
+
+
+  
+
+  
+
+
+<script>
+
+        //var Listadecanciones = ["Tema1", "Tema2", "Tema3", "Tema4"];//
+
+
+    const ListadecancionesHTML=document.getElementById ("Listadetemas");
+
+
+
+
+        var Escuchando =  {
+            Nombre: "Bohemian Rapsody",
+            Artista: "Queen",
+        };
+
+        var Listadecanciones = [
+            {
+
+                Nombre: "Bohemian Rapsody",
+                Artista: "Queen",
+                imagen: "Queen.svg"
+                
+
+            }, {
+
+                Nombre: "I will always love you",
+                Artista: "Whitney Houston",
+                imagen: "Whitney.svg"
+                //generos: [  "Pop", "Rock"]//
+
+            }, {
+
+                Nombre: "All Star",
+                Artista: "Smash Mouth",
+                imagen: "Smash.svg"
+
+            }, {
+
+                Nombre: "Dancing Queen",
+                Artista: "ABBA",
+                imagen: "ABBA.svg"
+
+            }, {
+
+                Nombre: "Whole Lotta Love",
+                Artista: "Led Zeppelin",
+                imagen: "Queen.svg"
+
+            }, {
+
+                Nombre: "Highway to Hell",
+                Artista: "AC/DC",
+                imagen: "Smash.svg"
+
+            }, {
+
+                Nombre: "Don't Stop Me Now",
+                Artista: "Queen",
+                imagen: "Queen.svg"
+
+            }
+
+
+        ];
+
+       /*  ListadoDeCanciones.innerHTML=`<div class="CardMusic">
+            <img src="images/Smash.svg" alt="">
+            <div class="CardText">
+                <h5>All Star</h5>
+                <h6>Smash Mouth</h6>
+            </div>
+        </div>`; */
+
+
+        var cajatemporalHTML='';
+
+
+    Listadecanciones.forEach(Tarjetacancion => {
+    
+        cajatemporalHTML= cajatemporalHTML +`<div class="CardMusic">
+                <img src="images/${Tarjetacancion.imagen}" alt="">
+                <div class="CardText">
+                    <h5>${Tarjetacancion.Nombre}</h5> <!-- Creamos una caja con un valor html que luego será el nombre de nuestra canción -->
+                    <h6>${Tarjetacancion.Artista}</h6>
+                </div>
+            </div>`;
+    });
+
+    ListadecancionesHTML.innerHTML=cajatemporalHTML;
+
+    
+</script>           
+
+</body>
+
+
+
+</html>
