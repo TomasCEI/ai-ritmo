@@ -45,3 +45,5 @@ Por otra parte, tenemos el chat con nuestra AI o nuestro superheroe, Aitman. Des
 **Song view + Playlists**
 
 ![Alt Text](readme/songs.png)
+
+Las playlists de moda y la visualización de canciones
