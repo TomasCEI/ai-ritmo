@@ -25,11 +25,11 @@
 
 
 
-        
-            <div class="BoxProfile" >
-                <div id="infoprofile"></div>
 
-                <!-- <img src="img/foto.jpg" alt="">
+        <div class="BoxProfile">
+            <div id="infoprofile"></div>
+
+            <!-- <img src="img/foto.jpg" alt="">
                 <div class="TextProfile">
                     <h3>@conaiesmejor</h3>
                     <p>La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos
@@ -37,15 +37,15 @@
                         tiempos y generos</p>
                 </div> -->
 
-            </div> 
+        </div>
 
-            <div>
-                <div class="PersonalInfo">
+        <div>
+            <div class="PersonalInfo">
 
 
-                    <div class="profilesongs">
-                        <div class="song">
-                            <!-- <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
+                <div class="profilesongs">
+                    <div class="song">
+                        <!-- <p>Para tu amor </p><img src="img/Juanes.jpg" alt="">
                         </div> -->
                         <div class="song">
                             <p>Usted</p> <img src="img/Diego Torres.png" alt="">
@@ -65,70 +65,65 @@
                         <div class="gener">Generos preferido 2</div>
                         <div class="gener">Generos preferido 3</div>
                         <div class="gener">Generos preferido 4</div>
-               
-            </div>
-        </main>
 
-
-        <nav class="Nav">
-
-            <div class="Nav-ai">
-
-                <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
-                    background="transparent" speed="1" style="width: 90px; " loop autoplay>
-                </dotlottie-player>
-                <div class="u-flex">
-
-                    <div class="Nav-ai-reproductor">
-                        <span>AI mucho ritmo</span>
-                        <span style="font-size: 70%; font-weight: 100;">Pepita. Ritmo</span>
                     </div>
-                    <i class="fa-solid fa-pause iconPause"></i>
-                </div>
+    </main>
 
+
+    <nav class="Nav">
+
+        <div class="Nav-ai">
+
+            <dotlottie-player src="https://lottie.host/f7d2f3ef-21aa-43cb-ac3c-2286af040fb5/MoTeTp1PTi.json"
+                background="transparent" speed="1" style="width: 90px; " loop autoplay>
+            </dotlottie-player>
+            <div class="u-flex">
+
+                <div class="Nav-ai-reproductor">
+                    <span>AI mucho ritmo</span>
+                    <span style="font-size: 70%; font-weight: 100;">Pepita. Ritmo</span>
+                </div>
+                <i class="fa-solid fa-pause iconPause"></i>
             </div>
 
-
-            <ul class="Nav-list">
-                <li class="Nav-list-item"><i class="fa-regular fa-heart Nav-list-item-icon "></i></li>
-                <li class="Nav-list-item"><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></li>
-                <li class="Nav-list-item"><i class="fa-regular fa-circle Nav-list-item-icon"></i></i></li>
-                <li class="Nav-list-item"><i class="fa-regular fa-user Nav-list-item-icon"></i></i></li>
-            </ul>
-        </nav>
-
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-            type="module"></script>
+        </div>
 
 
-        <script>
+        <ul class="Nav-list">
+            <li class="Nav-list-item"><i class="fa-regular fa-heart Nav-list-item-icon "></i></li>
+            <li class="Nav-list-item"><i class="fa-solid fa-magnifying-glass Nav-list-item-icon"></i></li>
+            <li class="Nav-list-item"><i class="fa-regular fa-circle Nav-list-item-icon"></i></i></li>
+            <li class="Nav-list-item"><i class="fa-regular fa-user Nav-list-item-icon"></i></i></li>
+        </ul>
+    </nav>
 
-        const infoprofile=document.getElementById("infoprofile");
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
-            var  profilusers =            [ 
-                {
-                imgProfileSrc: "..img/foto.png",
+
+    <script>
+
+        const infoprofile = document.getElementById("infoprofile");
+
+        var profilusers = [
+            {
+                imgProfileSrc: "../img/foto.jpg",
                 nombreUsuario: " Pete Pan",
                 nametag: "peterPan",
                 descripcion: "La música y las aventuras son mi vida, bienvienido a mi perfil donde encontras música de todos los tiempos y generos",
                 canciones: ["img/guetta.jpg", "Para tu amor"],
                 generos: ["pop", "rock", "house"],
             }
-                ];
-           
-             
-           
-            var infouserHTML="";
+        ];
 
-            // profiluser.forEach(persona =>
 
-            profilusers.forEach(usuario => {
-                
-               imageElement = document.getElementById('imgProfileSrc'); + `
-                                                ${usuario.imgProfileSrc}" alt=""> 
-                                                <div class="TextProfile">`
 
-                infouserHTML = infouserHTML + `
+        var infouserHTML = "";
+
+        // profiluser.forEach(persona =>
+
+        profilusers.forEach(usuario => {
+
+            infouserHTML = infouserHTML + `     <img src="${usuario.imgProfileSrc}">
                                                     <h3>Nombre de Usuario:${usuario.nombreUsuario}</h3>
                                                     <h2>Nick Name: @${usuario.nametag}</h2>
                                                     <p>descripcion${usuario.descripcion}</p>
@@ -138,12 +133,12 @@
                                                 <p>${usuario.canciones} 
                                                 </div>
                                                 `;
-                                                
-            });
-            infoprofile.innerHTML=infouserHTML;
-            imageElement.src = usuario.imgProfileSrc;
-        
-        </script>
+
+        });
+        infoprofile.innerHTML = infouserHTML;
+
+
+    </script>
 
 </html>
 </body>

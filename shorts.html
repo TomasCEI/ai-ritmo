@@ -25,12 +25,12 @@
 
     <div class="BoxPlays">
 
-        <div id="cajaplaylist">  </div>
+        <div id="cajaplaylist"> </div>
 
-          
-       
 
-        
+
+
+
 
         <!-- <div class="BoxPlay">
             <div class="headphones">
@@ -81,40 +81,40 @@
     </div> -->
 
 
-    <div class="RightIcons">
-        <i class="fa-regular fa-thumbs-up"></i>
-        <i class="fa-regular fa-thumbs-down"></i>
-        <i class="fa-regular fa-message"></i>
-        <i class="fa-solid fa-share"></i>
-        <i class="fa fa-forward" aria-hidden="true"></i>
-        <i class="fa fa-backward" aria-hidden="true"></i>
+        <div class="RightIcons">
+            <i class="fa-regular fa-thumbs-up"></i>
+            <i class="fa-regular fa-thumbs-down"></i>
+            <i class="fa-regular fa-message"></i>
+            <i class="fa-solid fa-share"></i>
+            <i class="fa fa-forward" aria-hidden="true"></i>
+            <i class="fa fa-backward" aria-hidden="true"></i>
 
 
 
-    </div>
+        </div>
 
-    <div class="movesong">
-        <button onclick="changeSing(0)">1</button>
-        <button onclick="changeSing(1)">2</button>
-        <button onclick="changeSing(2)">3</button>
-        <button onclick="changeSing(3)">4</button>
-        <button onclick="changeSing(4)">5</button>
-    </div>
+        <div class="movesong">
+            <button onclick="changeSing(0)">1</button>
+            <button onclick="changeSing(1)">2</button>
+            <button onclick="changeSing(2)">3</button>
+            <button onclick="changeSing(3)">4</button>
+            <button onclick="changeSing(4)">5</button>
+        </div>
 
 
 
-    <script>
-        function changeSing(pageIndex) {
-            const pagesContainer = document.querySelector('.cajaplaylist');
-            const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
+        <script>
+            function changeSing(pageIndex) {
+                const pagesContainer = document.querySelector('.cajaplaylist');
+                const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
 
-            pagesContainer.style.transform = `translateY(${offset}%)`;
+                pagesContainer.style.transform = `translateY(${offset}%)`;
 
-          
-        }
 
-    
-    </script>
+            }
+
+
+        </script>
     </div>
 
 
@@ -152,7 +152,7 @@
 
     <script>
 
-   const boxshorts = document.getElementById("cajaplaylist");
+        const boxshorts = document.getElementById("cajaplaylist");
 
 
         var infoSong = [
@@ -194,39 +194,50 @@
 
         var datosshortsHTML = "";
 
-        infoSong.forEach(sonando => {
-            datosshortsHTML = datosshortsHTML + `
 
-            <div class ="BoxPlay" id="infosong">
 
-                <div class="headphones">
-                <div id="imgaudio"  img src="img/audio.png" alt="${sonando.imgsong}"> </div>
-            
-            </div>`;
-        });
+        infoSong.forEach((sonando, index) => {
+            datosshortsHTML = datosshortsHTML += `
+
+            <div class ="BoxPlay${index}" id="infosong" >
+            <div class="headphones">
+            <div id="imgaudio"  img src= alt=""> 
+            </div>
+            </div>
+            </div>`
+        })
+
+            ;
         boxshorts.innerHTML = datosshortsHTML;
-        
-            </script>
-            
-            <div class="movesong">
-                <button onclick="changeSing(0)">1</button>
-                <button onclick="changeSing(1)">2</button>
-                <button onclick="changeSing(2)">3</button>
-                <button onclick="changeSing(3)">4</button>
-                <button onclick="changeSing(4)">5</button>
-            </div>
-        
-        
-        
-            <script>
-                function changeSing(pageIndex) {
-                    const pagesContainer = document.querySelector('.cajaplaylist');
-                    const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
-        
-                    pagesContainer.style.transform = `translateY(${offset}%)`;
-                }
-            </script>
-            </div>
+
+        var currenitem = 0;
+
+
+        sing.src = A.sig[urrenitem].infosong
+
+    </script>
+
+
+
+    <div class="movesong">
+        <button onclick="changeSing(0)">1</button>
+        <button onclick="changeSing(1)">2</button>
+        <button onclick="changeSing(2)">3</button>
+        <button onclick="changeSing(3)">4</button>
+        <button onclick="changeSing(4)">5</button>
+    </div>
+
+
+
+    <script>
+        function changeSing(pageIndex) {
+            const pagesContainer = document.querySelector('.cajaplaylist');
+            const offset = pageIndex * -(100 / 5); // Ancho de cada página (100%) multiplicado por el índice
+
+            pagesContainer.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+    </div>
 
 
 </html>
